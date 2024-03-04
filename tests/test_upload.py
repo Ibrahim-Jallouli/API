@@ -1,9 +1,8 @@
 import unittest
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))  # Ajouter le répertoire parent au chemin
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) 
 
-from app import app
 
 from app import app
 from io import BytesIO
