@@ -1,0 +1,35 @@
+# Fichiers Python générés
+*.pyc
+__pycache__/
+
+# Fichiers d'environnement virtuel
+venv/
+.env
+
+# Fichiers de dépendances Python
+lib/
+lib64/
+bin/
+include/
+*.egg-info/
+*.egg
+
+# Fichiers de configuration locaux
+instance/
+
+# Fichiers de téléchargement et de sauvegarde
+/downloads/
+/backup/
+
+# Fichiers de données volumineux (à adapter selon les besoins)
+/bigdata/
+
+# Fichiers de logs
+/logs/
+
+# Fichiers d'éditeurs spécifiques
+.idea/
+.vscode/
+
+# Fichiers de sauvegarde de l'éditeur
+*~
