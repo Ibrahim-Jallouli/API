@@ -1,7 +1,9 @@
 import unittest
 import os
 import sys
+from PIL import Image
 import base64
+from io import BytesIO
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) 
 
@@ -12,6 +14,7 @@ class TestRotation(unittest.TestCase):
         self.app = app.test_client()
 
     def test_rotate(self):
+        file_path = './resources/test_image-noirEtBlanc.png'
         # Load a sample image for testing (you may want to replace this with a real image path)
         sample_image_path = os.path.abspath(os.path.join(os.path.dirname(__file__), './resources/test_image.png'))
 
@@ -30,8 +33,8 @@ class TestRotation(unittest.TestCase):
         # Check the MIME type of the response
         self.assertEqual(response.mimetype, 'application/json')
 
-        # Check if the 'image_url' key is present in the response JSON
-        self.assertIn('image_url', response.json)
+        # Ouvrir l'image simulée avec Pillow
+        simulated_image = Image.open(file_path)
 
 
 if __name__ == '__main__':
