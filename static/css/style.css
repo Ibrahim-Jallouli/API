@@ -1,0 +1,42 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #031303;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #091d0a;
+}
+
+#errorDiv {
+    color: red;
+    margin-top: 10px;
+}
+
+#imageContainer {
+    margin-top: 20px;
+}
+
+#uploadedImage {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
