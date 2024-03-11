@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
+
+
 <body>
     <h1>Application de Traitement d'Images</h1>
 
@@ -32,6 +34,9 @@
     <button type="button" onclick="downloadImage()">Télécharger l'Image Transformée</button>
 
     <div id="errorDiv"></div>
+
+    <a href="{{ url_for('routes.documentation') }}" target="_blank">Consulter la documentation</a>
+
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

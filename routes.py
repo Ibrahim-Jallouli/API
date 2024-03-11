@@ -1,5 +1,5 @@
 from functools import wraps
-from flask import Blueprint, render_template, request, send_file, jsonify
+from flask import Blueprint, render_template, request, send_file, jsonify, render_template
 from PIL import Image, ImageOps
 import io
 import base64
@@ -117,3 +117,7 @@ def apply_transformation(transformation_func):
 #@verifier_api_key
 def download_image():
     return send_file('./modified_image.png', mimetype='image/png', as_attachment=True, download_name='modified_image.png')
+
+@routes.route('/documentation', methods=['GET'])
+def documentation():
+    return render_template('documentation.html')

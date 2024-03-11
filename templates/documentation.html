@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/doc-style.css') }}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation API Image Processing</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Documentation API Image Processing</h1>
+
+        <div class="endpoint">
+            <h2>/upload (POST)</h2>
+            <p>Endpoint for uploading an image.</p>
+            <p><strong>Usage:</strong></p>
+            <code>POST http://127.0.0.1/upload</code>
+        </div>
+
+        <div class="endpoint">
+            <h2>/invert_horizontal (POST)</h2>
+            <p>Endpoint for horizontally inverting an image.</p>
+            <p><strong>Usage:</strong></p>
+            <code>POST http://127.0.0.1/invert_horizontal</code>
+        </div>
+
+        <div class="endpoint">
+            <h2>/invert_vertical (POST)</h2>
+            <p>Endpoint for vertically inverting an image.</p>
+            <p><strong>Usage:</strong></p>
+            <code>POST http://127.0.0.1/invert_vertical</code>
+        </div>
+
+        <div class="endpoint">
+            <h2>/invert_colors (POST)</h2>
+            <p>Endpoint for inverting the colors of an image.</p>
+            <p><strong>Usage:</strong></p>
+            <code>POST http://127.0.0.1/invert_colors</code>
+        </div>
+
+        <div class="endpoint">
+            <h2>/rotate (POST)</h2>
+            <p>Endpoint for rotating an image by 90 degrees.</p>
+            <p><strong>Usage:</strong></p>
+            <code>POST http://127.0.0.1/rotate</code>
+        </div>
+
+        <div class="endpoint">
+            <h2>/change_color (POST)</h2>
+            <p>Endpoint for converting an image to black and white.</p>
+            <p><strong>Usage:</strong></p>
+            <code>POST http://127.0.0.1/change_color</code>
+        </div>
+
+        <div class="endpoint">
+            <h2>/download_image (GET)</h2>
+            <p>Endpoint for downloading the transformed image.</p>
+            <p><strong>Usage:</strong></p>
+            <code>GET http://127.0.0.1/download_image</code>
+        </div>
+    </div>
+</body>
+
+</html>
