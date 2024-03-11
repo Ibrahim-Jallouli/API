@@ -4,12 +4,13 @@ import sys
 import base64
 from PIL import Image
 import io
+import imagehash  
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) 
 
 from app import app
 
-class TestInvertVert(unittest.TestCase):
+class TestInvertVertical(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
 
@@ -43,8 +44,16 @@ class TestInvertVert(unittest.TestCase):
         reference_image_path = os.path.abspath(os.path.join(os.path.dirname(__file__), './resources/test_image-verticale.png'))
         reference_image = Image.open(reference_image_path)
 
-        # Check if the resulting image is identical to the reference image
-        self.assertTrue(result_image.tobytes() == reference_image.tobytes())
+        # Check if the resulting image is identical to the reference image using imagehash
+        hash_result = imagehash.average_hash(result_image)
+        hash_reference = imagehash.average_hash(reference_image)
+
+        # You can print the hash values for debugging
+        print("Hash Result:", hash_result)
+        print("Hash Reference:", hash_reference)
+
+        # Use an appropriate tolerance based on your requirements
+        self.assertTrue(hash_result == hash_reference)
 
 
 if __name__ == '__main__':

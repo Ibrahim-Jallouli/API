@@ -9,11 +9,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from app import app
 
-class TestInvertRotate(unittest.TestCase):
+class TestRotate(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
 
-    def test_invert_rotate(self):
+    def test_rotate(self):
         # Load a sample image for testing (you may want to replace this with a real image path)
         sample_image_path = os.path.abspath(os.path.join(os.path.dirname(__file__), './resources/test_image.png'))
 
